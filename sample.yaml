@@ -1,7 +1,6 @@
-- name: play1
-  hosts: all
+- name: TarunKumar
+  hosts:all
   tasks:
-   - name: using print module
+   - name: this is my first module execution
      ansible.builtin.debug:
-       msg: This is my first test
-    
+       msg: i am great
