@@ -3,5 +3,5 @@
   tasks:
    - name: using print module
      ansible.builtin.debug:
-     msg: This is my first test
+       msg: This is my first test
     
