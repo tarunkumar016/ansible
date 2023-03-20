@@ -1,5 +1,5 @@
 - name: TarunKumar
-  hosts:all
+  hosts: all
   tasks:
    - name: this is my first module execution
      ansible.builtin.debug:
