@@ -1,6 +1,6 @@
 - name: play1
-hosts: all
-tasks:
+  hosts: all
+  tasks:
  - name: this is to print statement module
    ansible.builtin.debug:
      msg: in this msg we write what msg to print
