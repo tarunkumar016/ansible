@@ -3,7 +3,7 @@
   tasks:
    - name: this is to print first task
      ansible.builtin.debug:
-      msg: in this msg we write what msg to print
+      msg: this is first task   
    - name: this is to print second task
      ansible.builtin.debug:
-      msg: in this msg we write what msg to print   
+      msg: this is second task   
