@@ -1,5 +1,4 @@
 - name: This is to demonostrate varibles in ansible
-  hosts: all
   vars:
    tarun: He has to practice regularlly
   tasks:
