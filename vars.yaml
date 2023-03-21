@@ -1,13 +1,8 @@
-- name: demo on using variables
+- name: This is to demonostrate how to use variables
   hosts: all
   vars:
    url: play.google.com
   tasks:
-   - name: printing the URL task
-     ansible.builtin.debug:
-       msg: The value of the url is {{url}}
-   - name: Printing url from the Task
-     vars:
-      url: task.google.com
+   - name: Printing the URL Task
      ansible.builtin.debug:
        msg: The value of the url is {{url}}
