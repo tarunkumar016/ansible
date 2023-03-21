@@ -1,0 +1,6 @@
+- name: to know how to use facts
+  hosts:all
+  tasks:
+   - name: Printing the Linux Distribution
+     ansible.builtin.debug:
+       msg: This is your Linux Distribution {{ansible_distribution}}
