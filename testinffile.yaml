@@ -11,9 +11,9 @@
   tasks:
    - name: this is to execute shell commands
      ansible.builtin.set_fact:
-       store: files.yaml
+       store: out
 
    - name: this is to execute shell commands
      ansible.builtin.debug:
-       msg: this is {{a}}
+       msg: this is {{out.stdout}}
         
