@@ -6,3 +6,8 @@
    - name: printing the URL task
      ansible.builtin.debug:
        msg: The value of the url is {{url}}
+   - name: Printing url from the Task
+     vars:
+      url: task.google.com
+     ansible.builtin.debug:
+       msg: The value of the url is {{url}}
