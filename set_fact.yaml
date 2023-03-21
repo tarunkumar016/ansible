@@ -13,7 +13,7 @@
   tasks:
    - name: this is to execute shell commands
      ansible.builtin.set_fact:
-     code: "{{out.r}}"
+     status_code: "{{out.r}}"
      ansible.builtin.debug:
        msg: "{{out.stdout}}"       
 
