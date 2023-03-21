@@ -9,13 +9,7 @@
      ansible.builtin.debug:
        msg: "{{out}}"
 
-   - name: this is to know know exit code
-     ansible.builtin.set_fact:
-     status_code: "{{out.rc}}"
-
-   - name: this is to print exit code 
-     ansible.builtin.debug:
-       msg: "{{out.rc}}"       
+    
 
 
        
