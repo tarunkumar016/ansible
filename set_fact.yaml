@@ -20,7 +20,7 @@
        msg: "{{out.rc}}"
 
        # to use variable from one play to another we have to use set_fact build and next line we use store 
-       that variable in a varible after module in a variable to work
+       # that variable in a varible after module in a variable to work
     
 
 
