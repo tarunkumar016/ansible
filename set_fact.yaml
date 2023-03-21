@@ -7,14 +7,13 @@
 
    - name: printing the output of uptime
      ansible.builtin.debug:
-       msg: "{{out.stdout}}"
+       msg: "{{out}}"
 
 - name: this is to know know exit code
   hosts: all
   tasks:
    - name: this is to know know exit code
      ansible.builtin.set_fact:
-       status_code: "{{out.rc}}"
    - name: this is to print exit code 
      ansible.builtin.debug:
        msg: "{{out.rc}}"
