@@ -4,10 +4,10 @@
   tasks:
    - name: this is to print first task
      ansible.builtin.debug:
-       msg: this is first task {{mark}}
+       msg: this is first task {{Mark}}
    - name: this is to print second task
      ansible.builtin.debug:
-       msg: this is second task {{mark}}
+       msg: this is second task {{Peter thiel}}
 - name: play1
   hosts: all
   tasks:
