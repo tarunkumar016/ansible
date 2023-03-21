@@ -7,6 +7,7 @@
    - name: printing the output of uptime
      ansible.builtin.debug:
        msg: "{{out}}"
+
 - name: This is 2nd Task to know how to use variable from one play to another play
   hosts: all
   tasks:
