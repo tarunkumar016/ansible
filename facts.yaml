@@ -1,5 +1,5 @@
 - name: to know how to use facts
-  hosts:all
+  hosts: all
   tasks:
    - name: Printing the Linux Distribution
      ansible.builtin.debug:
