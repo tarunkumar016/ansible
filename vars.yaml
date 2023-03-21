@@ -16,9 +16,7 @@
       url: three.google.com
      ansible.builtin.debug:
        msg: "{{url}}"
-   - name: Printing Command Line Variable
-      ansible.builtin.debug:
-        msg: this is to print command line variable called {{cmd_url}}
+   
           
        
      
