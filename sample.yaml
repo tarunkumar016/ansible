@@ -13,4 +13,4 @@
   tasks:
    - name: this is to print first task only in dev server
      ansible.builtin.debug:
-       msg: this is first task to do on dev server only {{url}}   
+       msg: this is first task to do on dev server only {{Mark}}   
