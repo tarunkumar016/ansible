@@ -9,6 +9,15 @@
      ansible.builtin.debug:
        msg: "{{out.stdout}}"
 
+- name: this is to know know exit code
+  hosts:all
+  tasks:
+   ansible.builtin.set_fact:
+     status_code: "{{out.rc}}"
+
+   - name: this is to print exit code 
+     ansible.builtin.debug:
+       msg: "{{out.rc}}"
     
 
 
