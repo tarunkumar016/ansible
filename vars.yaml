@@ -1,9 +1,9 @@
 - name: demo on how to use vars
   hosts: all
   vars:
-   URLL: play.google.commmmmmmmmmmmm
+   URLL: play.google.com
   tasks:
    - name: printing url
      ansible.builtin.debug:
-       msg:The value of the url is {{URL}}
+       msg: The value of the url is {{URLL}}
    
