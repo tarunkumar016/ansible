@@ -1,9 +1,10 @@
 - name: play1
   hosts: all
+  vars_files: dev_vars.yaml
   tasks:
    - name: this is to print first task
      ansible.builtin.debug:
-       msg: this is first task   
+       msg: this is first task {{mark}}
    - name: this is to print second task
      ansible.builtin.debug:
        msg: this is second task
@@ -12,4 +13,4 @@
   tasks:
    - name: this is to print first task only in dev server
      ansible.builtin.debug:
-       msg: this is first task to do on dev server only       
+       msg: this is first task to do on dev server only  {{url}}   
