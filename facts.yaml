@@ -5,7 +5,7 @@
      ansible.builtin.debug:
        msg: This is your Linux Distribution {{ansible_distribution}}
 
- - name: to know how to use facts
+- name: to know how to use facts
   hosts: all
   tasks:
    - name: Printing the ansible_distribution_version
