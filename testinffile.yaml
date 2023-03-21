@@ -10,8 +10,10 @@
 - name: This is to know how to use variable from one play to another play
   hosts: all
   tasks:
-   ansible.builtin.set_fact:
-     store: files.yaml
+   - name: this is to execute shell commands
+     ansible.builtin.set_fact:
+       store: files.yaml
+
    - name: this is to execute shell commands
      ansible.builtin.debug:
        msg: this is {{a}}
