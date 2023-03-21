@@ -1,15 +1,24 @@
-- name: This is to demonostrate how to use variables
+- name: This is to demonostrate type of variables 
   hosts: all
-  vars:
-   url: play.google.com
+  vars: 
+   url: one.google.com
   tasks:
-   - name: Printing the URL Task
+   - name: Printing Url from global variable
      ansible.builtin.debug:
-       msg: The value of the url is {{url}}
-   - name: Printing url from the Task
+       msg: The global variable is {{url}}
+   - name: Printing Url from local variable
      vars:
-      url: TASK.GOOGLE.COM
+      url: two.google.com
      ansible.builtin.debug:
-       msg: The value of the url is {{url}}
+       msg: url from local variable is {{url}}
+    - name: Printing The global varible when he has only variable prescribed in msg
+     vars:
+      url: three.google.com
+     ansible.builtin.debug:
+       msg: "{{url}}"
+    - name: Printing Command Line Variable
+      ansible.builtin.debug:
+        msg: "this is to print command line variable called {{cmd_url}}"
+          
        
      
