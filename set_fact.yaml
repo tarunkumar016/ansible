@@ -1,0 +1,10 @@
+- name: This is to know how to use variable from one play to another play
+  hosts: all
+  tasks:
+   - name: this is to execute shell commands
+     ansible.builtin.shell: uptime
+     register: out
+   - name: printing the output of uptime
+     ansible.builtin.debug:
+       msg: "{{out}}"
+       
