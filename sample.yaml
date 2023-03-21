@@ -10,7 +10,8 @@
        msg: this is second task {{Peter}}
 - name: play1
   hosts: all
+  vars_files: dev_vars.yaml
   tasks:
    - name: this is to print first task only in dev server
      ansible.builtin.debug:
-       msg: this is first task to do on dev server only {{Mark}}   
+       msg: this is first task to do on dev server only {{url}}   
