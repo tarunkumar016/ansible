@@ -12,8 +12,7 @@
   tasks:
    - name: this is to execute shell commands
      ansible.builtin.set_fact:
-     - name: printing the output of uptime
-       ansible.builtin.debug:
-         msg: "{{out.stdout}}"       
+     ansible.builtin.debug:
+       msg: "{{out.stdout}}"       
 
        
