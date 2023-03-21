@@ -6,4 +6,7 @@
      register: out 
    - name: Showing out variable output
      ansible.builtin.debug:
-       msg: "{{out.stdout}}"  
+       msg: "{{out.stdout}}"
+   - name: Showing out variable output
+     ansible.builtin.debug:
+       msg: "{{out.rc}}"       
