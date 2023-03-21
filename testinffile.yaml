@@ -1,7 +1,6 @@
-- name: This is to know how to use variable from one play to another play
+- name: This is to know how to use variable from oneeee play to another play
   hosts: all
-  vars_files:
-   files.yaml
+  vars_files: files.yaml
   tasks:
    - name: this is to execute shell commands
      ansible.builtin.shell: uptime
