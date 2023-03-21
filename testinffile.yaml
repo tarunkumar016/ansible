@@ -1,19 +1,13 @@
 - name: This is to know how to use variable from oneeee play to another play
   hosts: all
-  vars_files: files.yaml
+  vars:
+   url: this is tarun
   tasks:
    - name: this is to execute shell commands
      ansible.builtin.shell: uptime
      register: out
 
-- name: This is to know how to use variable from one play to another play
-  hosts: all
-  tasks:
-   - name: this is to execute shell commands
-     ansible.builtin.set_fact:
-       store: out
-
    - name: this is to execute shell commands
      ansible.builtin.debug:
-       msg: this is {{out.stdout}}
+       msg: this is {{url}}
         
