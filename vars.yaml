@@ -1,8 +1,9 @@
 - name: This is to demonostrate varibles in ansible
   vars:
    tarun: He has to practice regularlly
+  hosts: all
   tasks:
    - name: explaining about tarun
      ansible.builtin.debug:
-       msg: "{{tarun}}"
+       msg: {{tarun}}
     
