@@ -5,5 +5,5 @@
   tasks:
    - name: explaining about tarun
      ansible.builtin.debug:
-       msg: {{tarun}}
+       msg: "{{tarun}}"
     
