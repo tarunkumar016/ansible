@@ -11,12 +11,12 @@
       url: two.google.com
      ansible.builtin.debug:
        msg: url from local variable is {{url}}
-    - name: Printing The global varible when he has only variable prescribed in msg
+   - name: Printing The global varible when he has only variable prescribed in msg
      vars:
       url: three.google.com
      ansible.builtin.debug:
        msg: "{{url}}"
-    - name: Printing Command Line Variable
+   - name: Printing Command Line Variable
       ansible.builtin.debug:
         msg: this is to print command line variable called {{cmd_url}}
           
