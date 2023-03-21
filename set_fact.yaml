@@ -18,6 +18,9 @@
    - name: this is to print exit code 
      ansible.builtin.debug:
        msg: "{{out.rc}}"
+
+       # to use variable from one play to another we have to use set_fact build and next line we use store 
+       that variable in a varible after module in a variable to work
     
 
 
