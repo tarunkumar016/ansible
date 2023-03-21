@@ -1,9 +1,9 @@
-- name: demo on how to use vars
+- name: This is to demonostrate varibles in ansible
   hosts: all
   vars:
-   URLL: play.google.com
+   tarun: He has to practice regularlly
   tasks:
-   - name: printing url
+   - name: explaining about tarun
      ansible.builtin.debug:
-       msg: The value of the url is {{URLL}}
-   
+       msg: "{{tarun}}"
+    
