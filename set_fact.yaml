@@ -10,7 +10,7 @@
        msg: "{{out.stdout}}"
 
 - name: this is to know know exit code
-  hosts:all
+  hosts: all
   tasks:
    ansible.builtin.set_fact:
      status_code: "{{out.rc}}"
