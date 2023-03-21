@@ -4,14 +4,18 @@
    - name: this is to execute shell commands
      ansible.builtin.shell: uptime
      register: out
+
    - name: printing the output of uptime
      ansible.builtin.debug:
        msg: "{{out}}"
-   - name: this is to execute shell commands
+
+   - name: this is to know know exit code
      ansible.builtin.set_fact:
-     status_code: "{{out.r}}"
+     status_code: "{{out.rc}}"
+
+   - name: this is to print exit code 
      ansible.builtin.debug:
-       msg: "{{out.stdout}}"       
+       msg: "{{out.rc}}"       
 
 
        
