@@ -1,5 +1,5 @@
 - name: Demo on using variables
   hosts: all
   tasks:
-   -name: Demo on using shell module
-    ansible.builtin.shell: uptime 
+   - name: Demo on using shell module
+     ansible.builtin.shell: uptime 
