@@ -1,5 +1,5 @@
 - name: fucked up
   tasks:
-   -name: TArun Kumar
-   ansible.builtin.debug:
-     msg: System is system
+   - name: TArun Kumar
+     ansible.builtin.debug:
+       msg: System is system
