@@ -1,0 +1,3 @@
+- name: Installing Nginx
+  ansible.builtin.debug:
+    msg: installation completed
