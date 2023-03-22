@@ -1,7 +1,7 @@
-- name: fun loving
+- name: fun loving is a good
   hosts: all
   tasks:
-   - name: TArun Kumar
+   - name: TArun Kumar is a 
      ansible.builtin.debug:
        msg: System is system
 
