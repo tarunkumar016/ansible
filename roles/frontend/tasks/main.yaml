@@ -1,11 +1,5 @@
-- name: tarunnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
-- name: fun loving is a good
-
+- name: this is to test my command on ansible syntax
   tasks:
-   - name: TArun Kumar is a 
-     ansible.builtin.debug:
-       msg: he is bad
-
-   - name: TArun Kumarrrrrrrrr is a very good 
-     ansible.builtin.debug:
-       msg: he is good
+   - name: printing about tarun ansible knowledge
+   ansible.builtin.debug:
+    msg: He is knowledgeable
