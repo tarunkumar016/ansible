@@ -3,7 +3,7 @@
    - name: TArun Kumar
      ansible.builtin.debug:
        msg: System is system
-     ignore_errors: yes
+       
    - name: TArun Kumarrrrrrrrr is a very good 
       ansible.builtin.debug:
         msg: Systemmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
