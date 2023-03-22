@@ -1,4 +1,9 @@
-- name: Installing Nginx
+- name: Install nginx
   ansible.builtin.package:
     name: nginx
     state: present
+- name: Downloading , unzipping and deploying to nginx path
+  ansible.builtin.unarchive:
+    src: https://github.com/stans-robot-project/frontend/archive/main.zip
+    dest: /tmp
+    remote_src: yes
