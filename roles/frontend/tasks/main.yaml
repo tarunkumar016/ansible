@@ -1,4 +1,5 @@
 - name: this is to test my command on ansible syntax
+  hosts: frontend
   tasks:
    - name: printing about tarun ansible knowledge
    ansible.builtin.debug:
