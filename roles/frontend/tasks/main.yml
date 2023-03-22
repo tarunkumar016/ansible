@@ -2,4 +2,4 @@
   tasks:
    - name: printing about tarun ansible knowledge
      ansible.builtin.debug:
-       msg: He is knowledgeable
+      msg: He is knowledgeable
