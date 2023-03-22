@@ -1,5 +1,4 @@
 - name: fun loving is a good
-  hosts: all
   tasks:
    - name: TArun Kumar is a 
      ansible.builtin.debug:
