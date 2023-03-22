@@ -1,4 +1,4 @@
-- name: fucked up
+- name: fun loving
   tasks:
    - name: TArun Kumar
      ansible.builtin.debug:
