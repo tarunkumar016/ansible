@@ -1,4 +1,5 @@
 - name: fucked up
   hosts: all
-  ansible.builtin.debug:
-    msg: System
+  tasks:
+   ansible.builtin.debug:
+     msg: System
