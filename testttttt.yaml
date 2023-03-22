@@ -6,5 +6,5 @@
        msg: he is bad
 
    - name: TArun Kumarrrrrrrrr is a very good 
-      ansible.builtin.debug:
-        msg: he is good
+     ansible.builtin.debug:
+       msg: he is good
