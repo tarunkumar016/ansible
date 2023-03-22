@@ -1,5 +1,4 @@
-- name: this is to test my command on ansible syntax
-  tasks:
-   - name: printing about tarun ansible knowledge
-     ansible.builtin.debug:
-      msg: He is knowledgeable
+- name: Installing Nginx
+  ansible.builtin.package:
+    name: nginx
+    state: present
