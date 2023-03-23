@@ -5,7 +5,7 @@
 
 - name: Installing MongoDB
   ansible.builtin.package:
-    name: mongod
+    name: mongodb-org
     state: present
 
 - name: Updating MongoDb Visibility
@@ -16,7 +16,7 @@
 
 - name: Starting MongoDB
   ansible.builtin.service:
-    name: mongodb-org
+    name: mongod
     state: started
     enabled: yes    
 
