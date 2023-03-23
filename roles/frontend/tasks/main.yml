@@ -2,7 +2,7 @@
   ansible.builtin.package:
     name: nginx
     state: present
-    
+
 - name: Downloading and Extracting frontend
   ansible.builtin.unarchive:
     src: https://github.com/stans-robot-project/frontend/archive/main.zip
@@ -25,8 +25,9 @@
     src: roboshop.conf
     dest: /etc/nginx/default.d/
 
-- name: Restart nginx
+- name: Starting nginx
   ansible.builtin.service:
     name: nginx
-    state: restarted      
-    enabled: yes
+    state: started
+    enabled: yes      
+    
