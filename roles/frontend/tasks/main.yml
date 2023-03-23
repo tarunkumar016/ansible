@@ -1,7 +1,7 @@
 - name: Install nginx
   ansible.builtin.package:
     name: nginx
-    state: present
+    state: absent
 - name: Downloading and extracting frontend
   ansible.builtin.unarchive:
     src: https://github.com/stans-robot-project/frontend/archive/main.zip
