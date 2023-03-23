@@ -6,7 +6,7 @@
     name: nodejs
     state: present 
 
-- name: Add the user 'johnd' with a specific uid and a primary group of 'admin'
+- name: Creating roboshop user
   ansible.builtin.user:
     name: roboshop
     comment: Roboshop user account
