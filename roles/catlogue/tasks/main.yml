@@ -40,10 +40,6 @@
     dest: /etc/systemd/system/catalogue.service
     register: OUT 
 
-- name: Printing service status
-  ansible.builtin.debug:
-    msg: "{{OUT}}"
-
 - name: Restarting the service
   ansible.builtin.systemd:
     state: restarted
@@ -51,5 +47,9 @@
     name: catalogue
     enabled: yes
     register: OUT
+
+- name: Printing service status
+   ansible.builtin.debug:
+     msg: "{{OUT}}"
 
 
