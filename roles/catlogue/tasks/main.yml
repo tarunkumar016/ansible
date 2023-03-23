@@ -44,12 +44,9 @@
   ansible.builtin.systemd:
     state: restarted
     daemon_reload: true
-    name: "catalogue"
     enabled: yes
-    register: OUT
-
-- name: Printing service status
-  ansible.builtin.debug:
-    msg: "{{OUT}}"
+    name: "catalogue"
+    
+    
 
 
