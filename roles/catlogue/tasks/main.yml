@@ -45,8 +45,8 @@
     state: restarted
     daemon_reload: true
     enabled: yes
-    register: OUT
     name: "catalogue"
+    register: OUT
 
 - name: Printing service status
   ansible.builtin.debug:
