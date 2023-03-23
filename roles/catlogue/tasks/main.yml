@@ -25,7 +25,7 @@
 - name: Copying files to roboshop home directory
   ansible.builtin.copy:
     src: /tmp/catalogue-main/
-    dest: /home/{{APPUSER}}/tarun/  
+    dest: /home/{{APPUSER}}/{{COMPONENT}}/  
     owner: "{{APPUSER}}"
     group: "{{APPUSER}}"
     remote_src: yes    
