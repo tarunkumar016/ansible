@@ -1,6 +1,5 @@
 - name: Playbook to setup roboshop project
   become: yes
-  hosts: frontend
+  hosts: "{{component}}"
   roles:
-   - frontend
-   - mongo
+   - "{{component}}"
