@@ -47,6 +47,4 @@
     enabled: yes
     register: OUT
 
-- name: Printing service status
-  ansible.builtin.debug:
-    msg: "{{OUT}}"
+
