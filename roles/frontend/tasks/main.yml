@@ -10,6 +10,6 @@
 - name: Performing Frontend cleanup (files)
   ansible.builtin.file:
     path: /usr/share/nginx/html
-    state: present
+    state: absent
 
  
