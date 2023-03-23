@@ -29,3 +29,14 @@
     owner: "{{APPUSER}}"
     group: "{{APPUSER}}"
     remote_src: yes    
+    
+- name: Copying Component systemmd file
+  ansible.builtin.copy:
+    src: catalogue.service
+    dest: /etc/systemd/system/catalogue.service 
+
+- name: Restarting the service
+  ansible.builtin.systemd:
+    state: restarted
+    daemon_reload: true
+    name: catalogue    
