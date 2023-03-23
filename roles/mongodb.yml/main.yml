@@ -1,0 +1,5 @@
+- name: Downloading MongoDB repo
+  ansible.builtin.get_url:
+    url: https://raw.githubusercontent.com/stans-robot-project/mongodb/main/mongo.repo
+    dest: /etc/yum.repos.d/mongodb.repo
+    remote_src: yes
