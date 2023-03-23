@@ -19,7 +19,7 @@
 
 - name: Deleting Files under Roboshop user
   ansible.builtin.file:
-    path: /home/{{APP_USER}}/catalogue/
+    path: /home/{{APPUSER}}/{{COMPONENT}}/
     state: absent
 
 - name: Copying files to roboshop home directory
