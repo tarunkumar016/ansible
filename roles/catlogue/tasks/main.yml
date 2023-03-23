@@ -46,11 +46,6 @@
     daemon_reload: true
     enabled: yes
     name: catalogue
-    register: out
-
-- name: Printing status
-  ansible.builtin.debug:
-    msg: "{{out}}"
 
 
     
