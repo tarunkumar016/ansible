@@ -39,6 +39,10 @@
     src: catalogue.service
     dest: /etc/systemd/system/catalogue.service 
 
+- name: Printing service status
+  ansible.builtin.debug:
+    msg: "{{OUT}}"
+
 - name: Restarting the service
   ansible.builtin.systemd:
     state: restarted
