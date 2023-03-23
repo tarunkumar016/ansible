@@ -11,12 +11,12 @@
 
 - name: Performing Frontend cleanup (files)
   ansible.builtin.file:
-    path: /usr/share/nginx/html/*
+    path: /usr/share/nginx/html
     state: absent
 
 - name: Copy Frontend code
   ansible.builtin.copy:
-    src: /tmp/frontend-main/static/*
+    src: /tmp/frontend-main/static/
     dest: /usr/share/nginx/html/
     remote_src: yes
 
