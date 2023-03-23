@@ -22,7 +22,7 @@
 
 - name: Copy Roboshop proxy config file
   ansible.builtin.copy:
-    src: /roboshop.conf
+    src: /home/centos/ansible/roles/frontend/files/roboshop.conf
     dest: /etc/nginx/default.d/roboshop.conf
 
 - name: Start nginx
