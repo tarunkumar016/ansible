@@ -44,7 +44,7 @@
   ansible.builtin.systemd:
     state: restarted
     daemon_reload: true
-    name: catalogue
+    name: "{{COMPONENT}}"
     enabled: yes
     register: OUT
 
