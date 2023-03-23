@@ -37,7 +37,8 @@
 - name: Copying Component systemmd file
   ansible.builtin.copy:
     src: catalogue.service
-    dest: /etc/systemd/system/catalogue.service 
+    dest: /etc/systemd/system/catalogue.service
+    register: OUT 
 
 - name: Printing service status
   ansible.builtin.debug:
