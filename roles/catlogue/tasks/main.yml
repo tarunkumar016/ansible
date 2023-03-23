@@ -19,13 +19,13 @@
 
 - name: Deleting Files under Roboshop user
   ansible.builtin.file:
-    path: /home/{{APPUSER}}/{{COMPONENT}}/
+    path: /home/{{APPUSER}}/{{COMPONENT}}/tarun/
     state: absent
 
 - name: Copying files to roboshop home directory
   ansible.builtin.copy:
     src: /tmp/catalogue-main/
-    dest: /home/{{APPUSER}}/{{COMPONENT}}/tarun  
+    dest: /home/{{APPUSER}}/{{COMPONENT}}/  
     owner: "{{APPUSER}}"
     group: "{{APPUSER}}"
     remote_src: yes    
