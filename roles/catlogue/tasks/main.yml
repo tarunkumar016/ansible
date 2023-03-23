@@ -29,6 +29,10 @@
     owner: "{{APPUSER}}"
     group: "{{APPUSER}}"
     remote_src: yes    
+
+- name: Generating Node Modules
+  community.general.npm:
+    path: /home/{{aAPPUSER}}/{{COMPONENT}}/
     
 - name: Copying Component systemmd file
   ansible.builtin.copy:
