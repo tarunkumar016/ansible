@@ -12,8 +12,8 @@
   ansible.builtin.replace:
     path: "{{item}}"
     loop:
-     - /etc/redis.conf
-     - /etc/redis/redis.conf
+       - /etc/redis.conf
+       - /etc/redis/redis.conf
     regexp: '127.0.0.1'
     replace: '0.0.0.0'
 
