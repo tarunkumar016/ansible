@@ -4,10 +4,13 @@
 - name: installing and starting rabbitmq-server
   ansible.builtin.yum:
     name: rabbitmq-server
-    state: "{{ item }}"
-    loop:
-     - present
-     - started
+    state: present
+
+- name: starting rabbitmq-server
+  ansible.builtin.service:
+    name: rabbitmq-server
+    state: started
+
 - name: Creating app user for rabbitmq
   community.rabbitmq.rabbitmq_user:
     user: roboshop
