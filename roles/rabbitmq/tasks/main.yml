@@ -1,0 +1,21 @@
+- name: Installing Elarng dependency
+  ansible.builtin.shell: curl -s https://packagecloud.io/install/repositories/rabbitmq/erlang/script.rpm.sh | sudo bash && curl -s https://packagecloud.io/install/repositories/rabbitmq/rabbitmq-server/script.rpm.sh | sudo bash
+
+- name: installing and starting rabbitmq-server
+  ansible.builtin.yum:
+    name: rabbitmq-server
+    state: "{{item}}"
+    loop:
+     - present
+     - started
+- name: Creating app user for rabbitmq
+  community.rabbitmq.rabbitmq_user:
+    user: roboshop
+    password: roboshop123
+    permissions:
+      - vhost: /
+        configure_priv: .*
+        read_priv: .*
+        write_priv: .*
+    state: present
+
