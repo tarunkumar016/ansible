@@ -25,9 +25,20 @@
     group: "{{APPUSER}}"
     remote_src: yes
 
+- name: Copy Component systemd file
+  ansible.builtin.copy:
+    src: systemd.service 
+    dest: /home/{{APPUSER}}/{{COMPONENT}}/systemd.service 
+
 - name: Generating Node Modules
   community.general.npm:
     path: /home/{{APPUSER}}/{{COMPONENT}}/
+
+- name: Start {{APPUSER}} SERVICE
+  ansible.builtin.service:
+    name: user
+    enabled: yes
+    state: started
         
 
 
