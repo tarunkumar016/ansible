@@ -1,0 +1,25 @@
+- name: Configuring Nodejs repo
+  ansible.builtin.shell: curl --silent --location https://rpm.nodesource.com/setup_16.x | sudo bash -
+
+- name: installing Nodejs
+  ansible.builtin.yum:
+    name: nodejs
+    state: present 
+
+- name: Creating roboshop user
+  ansible.builtin.user:
+    name: "{{APPUSER}}"
+    comment: creating roboshop user
+
+- name: Download and extract Module
+  ansible.builtin.unarchive:
+    src: https://github.com/stans-robot-project/user/archive/main.zip
+    dest: /tmp/
+    remote_src: yes
+
+- Performing Catalogue cleanup
+  ansible.builtin.file:
+    path: /home/{{APPUSER}}/{{COMPONENT}}/
+    state: absent
+
+
