@@ -16,6 +16,10 @@
     src: https://github.com/stans-robot-project/cart/archive/main.zip
     dest: /tmp/
     remote_src: yes
+    
+- name: Generating Node Modules
+  community.general.npm:
+    path: /home/{{APPUSER}}/{{COMPONENT}}/    
 
 - name: Copying files to {{APPUSER}}
   ansible.builtin.copy:
@@ -29,10 +33,6 @@
   ansible.builtin.copy:
     src: systemd.service 
     dest: /etc/systemd/system/{{COMPONENT}}.service
-
-- name: Generating Node Modules
-  community.general.npm:
-    path: /home/{{APPUSER}}/{{COMPONENT}}/
 
 - name: Starting User service
   ansible.builtin.systemd:

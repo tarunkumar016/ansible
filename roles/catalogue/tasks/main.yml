@@ -1,0 +1,11 @@
+Calling Nodejs role from common role
+- name: Calling Nodejs role from common role
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: nodejs
+
+
+    
+    
+
+
