@@ -4,17 +4,18 @@
 - name: installing Nodejs
   ansible.builtin.yum:
     name: nodejs
-    state: present
-
-- name: Generating Node Modules
-  community.general.npm:
-    path: /home/{{APPUSER}}/{{COMPONENT}}/   
+    state: present   
 
 # Calling user role from common role
 - name: Calling user role from common role
   ansible.builtin.include_role:
     name: common
     tasks_from: createuser.yaml
+
+# Generating Node Modules
+- name: Generating Node Modules
+  community.general.npm:
+    path: /home/{{APPUSER}}/{{COMPONENT}}/
 
 # Calling download and extract from common role
 - name: Calling download and extract from common role
