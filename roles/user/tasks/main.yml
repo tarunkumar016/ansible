@@ -34,12 +34,12 @@
   community.general.npm:
     path: /home/{{APPUSER}}/{{COMPONENT}}/
 
-- name: Start {{APPUSER}} SERVICE
-  ansible.builtin.service:
-    name: user
-    enabled: yes
-    state: started
-        
+- name: Restarting service
+  ansible.builtin.systemd:
+    state: restarted
+    enabled: true
+    daemon_reload: true
+    
 
 
 
