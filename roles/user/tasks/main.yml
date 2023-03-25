@@ -16,12 +16,15 @@
     src: https://github.com/stans-robot-project/user/archive/main.zip
     dest: /tmp/
     remote_src: yes
+
 - name: Copy files to {{APPUSER}}
   ansible.builtin.copy:
     src: /tmp/user-main/
     dest: /home/{{APPUSER}}/{{COMPONENT}}
     owner: "{{APPUSER}}"
     group: "{{APPUSER}}"
+    remote_src: yes
+
 - name: Generating Node Modules:
   community.general.npm:
     path: /home/{{APPUSER}}/{{COMPONENT}}/
