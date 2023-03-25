@@ -1,0 +1,23 @@
+- name: installing Maven
+  ansible.builtin.yum:
+    name: maven
+    state: present   
+
+# Calling user role from common role
+- name: Calling user role from common role
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: createuser
+
+# Calling download and extract from common role
+- name: Calling download and extract from common role
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: download
+
+# Calling download and extract from common role
+- name: Calling download and extract from common role
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: download
+
