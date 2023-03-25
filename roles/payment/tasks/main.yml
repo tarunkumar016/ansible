@@ -1,0 +1,8 @@
+- name: Installing Elarng dependency
+  ansible.builtin.shell: yum install python36 gcc python3-devel -y
+  
+# Calling user role from common role
+- name: Calling user role from common role
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: createuser
