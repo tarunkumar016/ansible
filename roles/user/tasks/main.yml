@@ -28,17 +28,16 @@
 - name: Copy Component systemd file
   ansible.builtin.copy:
     src: systemd.service 
-    dest: /home/{{APPUSER}}/{{COMPONENT}}/systemd.service 
+    dest: /etc/systemd/system/{{COMPONENT}}.service
 
 - name: Generating Node Modules
   community.general.npm:
     path: /home/{{APPUSER}}/{{COMPONENT}}/
 
-- name: Restarting service
+- name: Starting User service
   ansible.builtin.systemd:
-    state: restarted
-    enabled: true
-    daemon_reload: true
+    state: started
+    enabled: yes
     name: "{{COMPONENT}}"
     
 
