@@ -1,0 +1,3 @@
+- name: Generating Node Modules
+  community.general.npm:
+    path: /home/{{APPUSER}}/{{COMPONENT}}/

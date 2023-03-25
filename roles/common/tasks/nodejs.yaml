@@ -10,12 +10,13 @@
 - name: Calling user role from common role
   ansible.builtin.include_role:
     name: common
-    tasks_from: createuser.yaml
+    tasks_from: createuser
 
-# Generating Node Modules
-- name: Generating Node Modules
-  community.general.npm:
-    path: /home/{{APPUSER}}/{{COMPONENT}}/
+# Calling to generate node modules
+- name: Calling to generate node modules
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: nodemodules
 
 # Calling download and extract from common role
 - name: Calling download and extract from common role
