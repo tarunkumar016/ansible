@@ -12,23 +12,23 @@
     name: common
     tasks_from: createuser
 
+# Calling download and extract from common role
+- name: Calling download and extract from common role
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: download
+
+# Calling download and extract from common role
+- name: Calling download and extract from common role
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: download
+
 # Calling to generate node modules
 - name: Calling to generate node modules
   ansible.builtin.include_role:
     name: common
     tasks_from: nodemodules
-
-# Calling download and extract from common role
-- name: Calling download and extract from common role
-  ansible.builtin.include_role:
-    name: common
-    tasks_from: download
-
-# Calling download and extract from common role
-- name: Calling download and extract from common role
-  ansible.builtin.include_role:
-    name: common
-    tasks_from: download
 
 # Calling configuring service
 - name: Calling configuring service
