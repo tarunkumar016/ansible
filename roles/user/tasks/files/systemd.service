@@ -1,0 +1,12 @@
+[Unit]
+Description = User Service
+[Service]
+User=roboshop
+Environment=MONGO=true
+Environment=172.31.8.49=REDIS_ENDPOINT
+Environment=MONGO_URL="172.31.1.85://MONGO_ENDPOINT:27017/users"
+ExecStart=/bin/node /home/roboshop/user/server.js
+SyslogIdentifier=user
+
+[Install]
+WantedBy=multi-user.target
