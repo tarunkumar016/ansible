@@ -4,7 +4,7 @@
 - name: installing and starting rabbitmq-server
   ansible.builtin.yum:
     name: rabbitmq-server
-    state: "{{item}}"
+    state: "{{ item }}"
     loop:
      - present
      - started
