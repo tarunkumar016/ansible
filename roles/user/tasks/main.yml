@@ -25,7 +25,7 @@
     group: "{{APPUSER}}"
     remote_src: yes
 
-- name: Generating Node Modules:
+- name: Generating Node Modules
   community.general.npm:
     path: /home/{{APPUSER}}/{{COMPONENT}}/
         
