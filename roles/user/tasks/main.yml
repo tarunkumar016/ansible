@@ -17,9 +17,5 @@
     dest: /tmp/
     remote_src: yes
 
-- Performing Catalogue cleanup
-  ansible.builtin.file:
-    path: /home/{{APPUSER}}/{{COMPONENT}}/
-    state: absent
 
 
