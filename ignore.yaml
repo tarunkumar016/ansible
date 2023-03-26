@@ -12,3 +12,9 @@
    - name: Execute Task when distribution is Ubuntu
      ansible.builtin.debug:
        msg: "{{OUT}}"
+
+- name: to know how to use facts
+  hosts: all
+   - name: Setting host facts using complex arguments
+     ansible.builtin.set_fact:
+     tarun: "{{OUT}}"     
