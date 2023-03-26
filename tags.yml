@@ -15,5 +15,5 @@
    - name: Execute Task when distribution is Ubuntu
      ansible.builtin.debug:
        msg: Welcome to Ubuntu 
-     when: ansible_distribution == "Ubuntu"
+     when: ansible_distribution == "CentOS"
      tags: centos
