@@ -16,6 +16,10 @@
 - name: to know how to use facts
   hosts: test
   tasks:
-   - name: Setting host facts using complex arguments
+   - name: carrying fron previous playbook
      ansible.builtin.set_fact:
-       tarun: "{{OUT.stdout}}"     
+       tarun: "{{OUT.stdout}}"    
+
+   - name: this is to print exit code 
+     ansible.builtin.debug:
+       msg: "{{out.stdout}}"        
