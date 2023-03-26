@@ -1,0 +1,12 @@
+- name: Demo on conditions
+  hosts: test
+  tasks: 
+   - name: Check the process is running or not 
+     ansible.builtin.shell: pas -ef|grep java
+     ignore_errors: yes   
+
+
+   - name: Execute Task when distribution is Ubuntu
+     ansible.builtin.debug:
+       msg: Welcome to Ubuntu 
+     tags: ubuntu
