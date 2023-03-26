@@ -22,4 +22,4 @@
 
    - name: this is to print exit code 
      ansible.builtin.debug:
-       msg: "{{out.stdout}}"        
+       msg: "{{OUT.stdout}}"        
