@@ -1,0 +1,15 @@
+- name: Demo on conditions
+  hosts: test
+  become: yes
+  tasks: 
+   - name: Check the process is running or not 
+     ansible.builtin.shell: psss -ef|grep java 
+     ignore_errors: yes
+
+   - name: checking user id
+     ansible.builtin.shell: id
+     register: OUT
+
+   - name: Execute Task when distribution is Ubuntu
+     ansible.builtin.debug:
+       msg: "{{OUT}}"
