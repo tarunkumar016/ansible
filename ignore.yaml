@@ -11,3 +11,8 @@
 
    - name: checking user id
      ansible.builtin.shell: id
+     register: OUT
+
+   - name: Execute Task when distribution is Ubuntu
+     ansible.builtin.debug:
+       msg: "{{OUT}}"  
