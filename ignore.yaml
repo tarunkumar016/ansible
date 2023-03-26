@@ -2,7 +2,7 @@
   hosts: test
   tasks: 
    - name: Check the process is running or not 
-     ansible.builtin.shell: pas -ef|grep java 
+     ansible.builtin.shell: ps -ef|grep java 
 
    - name: Execute Task when distribution is Ubuntu
      ansible.builtin.debug:
