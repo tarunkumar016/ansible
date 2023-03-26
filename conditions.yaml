@@ -21,5 +21,10 @@
    - name: Execute about Tarun
      ansible.builtin.debug:
        msg: He is a great Guy
-     when: action is defined
+     when: action is not defined
+
+   - name: Execute about Tarun
+     ansible.builtin.debug:
+       msg: He is a great Guy
+     when: action is defined     
       
