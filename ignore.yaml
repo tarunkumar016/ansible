@@ -13,6 +13,6 @@
      ansible.builtin.debug:
        msg: "{{OUT}}"
 
-- name: Execute Task when distribution is Ubuntu
+- name: This is second playbook
   ansible.builtin.set_fact:    
   tarun: "{{OUT}}"
