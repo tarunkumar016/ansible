@@ -5,10 +5,6 @@
      ansible.builtin.shell: psss -ef|grep java 
      ignore_errors: yes
 
-   - name: Execute Task when distribution is Ubuntu
-     ansible.builtin.debug:
-       msg: Welcome to Ubuntu
-
    - name: checking user id
      ansible.builtin.shell: id
      register: OUT
