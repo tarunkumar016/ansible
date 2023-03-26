@@ -1,6 +1,8 @@
 - name: Demo on conditions
   hosts: test
   tasks:
+  vars:
+  action: true
    - name: Execute Task when distribution is Centos
      ansible.builtin.debug:
        msg: Welcometo Centos 
@@ -10,3 +12,9 @@
      ansible.builtin.debug:
        msg: Welcome to Ubuntu 
      when: ansible_distribution == "Ubuntu"
+
+   - name: Execute about Tarun
+     ansible.builtin.debug:
+       msg: He is a great Guy
+     when: action
+      
