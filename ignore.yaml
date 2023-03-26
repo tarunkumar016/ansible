@@ -15,6 +15,7 @@
 
 - name: to know how to use facts
   hosts: test
+  tasks:
    - name: Setting host facts using complex arguments
      ansible.builtin.set_fact:
-     tarun: "{{OUT}}"     
+     tarun: "{{OUT.stdout}}"     
