@@ -1,7 +1,6 @@
--name: installing nginx
- hosts: test
- items: 
-  - name: Install nginx
-    ansible.builtin.package:
-    name: nginx
-    state: present
+- name: installing nginx
+  hosts: test
+   - name: Install nginx
+     ansible.builtin.package:
+     name: nginx
+     state: present
