@@ -14,5 +14,6 @@
        msg: "{{OUT}}"
 
 - name: Setting host facts using complex arguments
-  ansible.builtin.set_fact:
-    STATUS_CODE: "{{OUT}}"
+   - name: Setting host facts using complex arguments 
+     ansible.builtin.set_fact:
+     STATUS_CODE: "{{OUT}}"
