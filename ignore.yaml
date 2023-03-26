@@ -14,7 +14,7 @@
        msg: "{{OUT}}"
 
 - name: to know how to use facts
-  hosts: all
+  hosts: test
    - name: Setting host facts using complex arguments
      ansible.builtin.set_fact:
      tarun: "{{OUT}}"     
