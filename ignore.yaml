@@ -5,8 +5,6 @@
      ansible.builtin.shell: pas -ef|grep java
      ignore_errors: yes   
 
-
    - name: Execute Task when distribution is Ubuntu
      ansible.builtin.debug:
-       msg: Welcome to Ubuntu 
-     tags: ubuntu
+       msg: Welcome to Ubuntu
