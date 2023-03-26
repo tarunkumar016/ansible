@@ -17,4 +17,9 @@
      ansible.builtin.debug:
        msg: He is a great Guy
      when: action
+
+    - name: Execute about Tarun
+      ansible.builtin.debug:
+        msg: He is a great Guy
+      when: action is defined
       
