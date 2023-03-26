@@ -1,0 +1,11 @@
+- name: Demo on conditions
+  hosts: test
+  become: yes
+  tasks: 
+   - name: Execute Task when distribution is Ubuntu
+     ansible.builtin.debug:
+       msg: "{{item}}"
+     loop:
+       - 1
+       - 2
+       - 3    
