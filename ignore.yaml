@@ -18,4 +18,4 @@
   tasks:
    - name: Setting host facts using complex arguments
      ansible.builtin.set_fact:
-     tarun: "{{OUT.stdout}}"     
+       tarun: "{{OUT.stdout}}"     
