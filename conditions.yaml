@@ -1,8 +1,8 @@
 - name: Demo on conditions
   hosts: test
-  tasks:
   vars:
-  action: true
+   action: true
+  tasks: 
    - name: Execute Task when distribution is Centos
      ansible.builtin.debug:
        msg: Welcometo Centos 
