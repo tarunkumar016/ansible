@@ -9,6 +9,7 @@
    - name: checking user id
      ansible.builtin.shell: id
      register: OUT
+     become: yes
 
    - name: Execute Task when distribution is Ubuntu
      ansible.builtin.debug:
