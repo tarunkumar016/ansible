@@ -12,6 +12,7 @@
    - name: Execute Task when distribution is Ubuntu
      ansible.builtin.debug:
        msg: "{{OUT}}"
-         
+
 - name: Execute Task when distribution is Ubuntu
-  ansible.builtin.set_fact: "{{OUT}}"   
+  ansible.builtin.set_fact:    
+  tarun: "{{OUT}}"
