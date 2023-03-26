@@ -15,4 +15,4 @@
 
 - name: Setting host facts using complex arguments
   ansible.builtin.set_fact:
-    one_fact: "{{OUT}}"
+    STATUS_CODE: "{{OUT}}"
