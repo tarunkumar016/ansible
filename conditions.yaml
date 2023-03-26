@@ -1,0 +1,12 @@
+- name: Demo on conditions
+  hosts: test
+  tasks:
+  - name: Execute Task when distribution is Centos
+    ansible.builtin.debug:
+      msg: Welcometo Centos 
+   when: ansible_distribution == "CenTOS"
+
+   - name: Execute Task when distribution is UBUNTU
+     ansible.builtin.debug:
+       msg: Welcome to UBANTU 
+     when: ansible_distribution == "Ubuntu"
