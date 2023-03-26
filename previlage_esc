@@ -9,7 +9,7 @@
    - name: checking user id
      ansible.builtin.shell: id
      register: OUT
-     become: yes
+     become_user: roboshop
 
    - name: Execute Task when distribution is Ubuntu
      ansible.builtin.debug:
