@@ -13,6 +13,6 @@
      ansible.builtin.debug:
        msg: "{{OUT}}"
 
-- name: This is second playbook
-  ansible.builtin.set_fact:    
-  tarun: "{{OUT}}"
+- name: Setting host facts using complex arguments
+  ansible.builtin.set_fact:
+    one_fact: "{{OUT}}"
